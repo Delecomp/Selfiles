@@ -1,0 +1,47 @@
+
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: Rule
+log-level: info
+external-controller: 127.0.0.1:9090
+
+Proxy:
+
+Proxy Group:
+
+Rule:
+- DOMAIN-SUFFIX,google.com,DIRECT
+- DOMAIN-KEYWORD,google,DIRECT
+- DOMAIN,google.com,DIRECT
+- DOMAIN-SUFFIX,ad.com,REJECT
+- GEOIP,CN,DIRECT
+- MATCH,DIRECT
+# UnblockNeteaseMusic
+- DOMAIN-SUFFIX,163.com,UnblockNeteaseMusic
+- DOMAIN-SUFFIX,126.net,UnblockNeteaseMusic
+- DOMAIN-SUFFIX,iadmat.nosdn.127.net,REJECT
+- DOMAIN-SUFFIX,iadmusicmat.music.126.net,REJECT
+- DOMAIN-SUFFIX,iadmusicmatvideo.music.126.net,REJECT
+- IP-CIDR,59.111.181.0/24,UnblockNeteaseMusic
+- IP-CIDR,115.236.118.0/24,UnblockNeteaseMusic
+- IP-CIDR,223.252.199.0/24,UnblockNeteaseMusic
+- IP-CIDR,39.105.63.80/32,UnblockNeteaseMusic
+- IP-CIDR,47.100.127.239/32,UnblockNeteaseMusic
+- IP-CIDR,59.111.160.195/32,UnblockNeteaseMusic
+- IP-CIDR,59.111.160.197/32,UnblockNeteaseMusic
+- IP-CIDR,59.111.181.35/32,UnblockNeteaseMusic
+- IP-CIDR,59.111.181.38/32,UnblockNeteaseMusic
+- IP-CIDR,59.111.181.60/32,UnblockNeteaseMusic
+- IP-CIDR,101.71.154.241/32,UnblockNeteaseMusic
+- IP-CIDR,103.126.92.132/32,UnblockNeteaseMusic
+- IP-CIDR,103.126.92.133/32,UnblockNeteaseMusic
+- IP-CIDR,112.13.119.17/32,UnblockNeteaseMusic
+- IP-CIDR,115.236.118.33/32,UnblockNeteaseMusic
+- IP-CIDR,118.24.63.156/32,UnblockNeteaseMusic
+- IP-CIDR,193.112.159.225/32,UnblockNeteaseMusic
+- IP-CIDR,223.252.199.66/32,UnblockNeteaseMusic
+- IP-CIDR,223.252.199.67/32,UnblockNeteaseMusic
+- IP-CIDR,59.111.181.0/24,UnblockNeteaseMusic
+- IP-CIDR,115.236.118.0/24,UnblockNeteaseMusic
+- IP-CIDR,223.252.199.0/24,UnblockNeteaseMusic
