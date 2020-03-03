@@ -1,6 +1,6 @@
 /* Collected by Delecomp
 QuantumultX:
-^https:\/\/api\.zhihu\.com\/answers\/.*\/comments\/featured-comment url reject-img
+https:\/\/api\.zhihu\.com\/answers\/.*\/comments\/featured-comment url reject-img
 ^https:\/\/api\.zhihu\.com\/appview\/api\/v4\/answers\/.*\/recommendations url reject-img
 ^https:\/\/api\.zhihu\.com\/(moments\?(action|feed_type)|topstory\/recommend|v\d\/questions|market\/header|people\/) url script-response-body ZhiHuAdBlock.js
 [MITM]
