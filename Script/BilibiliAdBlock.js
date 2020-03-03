@@ -1,3 +1,6 @@
+/*
+^https:\/\/app\.bilibili\.com\/(search\/resource|x\/(resource\/show\/tab|v2\/(view|rank|feed|reply\/main|account\/mine))) url response-body BilibiliAdBlock.js
+*/
 const up_blacklist = ['NathanRich火锅大王','大祥哥来了'];
 const title_blackwords = ['乔碧萝','鸡你太美'];
 const region_blacklist = ['宅舞','三次元舞蹈'];
