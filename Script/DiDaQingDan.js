@@ -1,4 +1,5 @@
 /*
+Use the old version to unlock (5.40)
 TickTick (Tick list) unlock pro
 QX:
 ^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status url script-response-body DiDaQingDan.js
