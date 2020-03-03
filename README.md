@@ -1,5 +1,5 @@
 # 📦Some config of nice proxy tools.
-📖Most collected from others.
+📖Most collected
 
 
 🔍Use carefully.
