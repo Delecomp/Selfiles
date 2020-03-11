@@ -17,4 +17,6 @@ geo_location_checker=http://ip-api.com/json/?lang=zh-CN, https://raw.githubuserc
 geo_location_checker= http://api.ipstack.com/check?access_key=1c24147fb534e1a71cb35ff84de2d153&language=zh&output=json , https://raw.githubusercontent.com/Delecomp/Selfiles/Profiles/QuantumultX/GeoIP/IPInfo.js
 
 // Made by Shawn.(前两个为英语显示，后两个为中文显示)
+
+
 // 台旗emoji无法正常显示时，在手机设置中将地区改为国区以外地区即可正常显示.
