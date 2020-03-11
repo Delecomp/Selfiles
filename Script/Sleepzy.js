@@ -1,6 +1,16 @@
 /*
+QuantumultX:
+
 [rewrite_local]
-^https:\/\/subs\.platforms\.team\/apple\/verifyTransaction$ url script-response-body sleepzy.js
+^https:\/\/subs\.platforms\.team\/apple\/verifyTransaction$ url script-response-body Sleepzy.js
+[mitm]
+hostname = subs.platforms.team
+
+Surge:
+
+[Script]
+http-request ^https:\/\/subs\.platforms\.team\/apple\/verifyTransaction$ script-path=https://raw.githubusercontent.com/Delecomp/Selfiles/Profiles/Script/Sleepzy.js
+[MITM]
 hostname = subs.platforms.team
 */
 var body = $response.body;
