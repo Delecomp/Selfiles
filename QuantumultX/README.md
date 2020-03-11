@@ -1,1 +1,0 @@
-Collected from **DivineEngine**
