@@ -1,13 +1,13 @@
 /*
-Netease snail reading unlock vip
+NeteaseReading Unlock Vip
 
-QX:
-^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info\.json url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/wnyd.js
+QuantumultX
+^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info\.json url script-response-body NeteaseReading.js
 
 Surge4：
-http-response ^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info\.json requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/wnyd.js
+http-response ^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info\.json requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Delecomp/Selfiles/Profiles/Script/NeteaseReading.js
 
-Surge & QX MITM = p.du.163.com
+Surge & QuantumultX MITM = p.du.163.com
 */
 
 var body = $response.body;
