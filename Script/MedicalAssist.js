@@ -1,9 +1,15 @@
 /*
+QuantumultX:
+
+[rewrite_local]
+^https?:\/\/(i|newdrugs)\.dxy\.cn\/(snsapi\/username\/|app\/user\/(pro\/stat\?|init\?timestamp=)) url response-body MedicalAssist.js
+[mitm]
+hostname = newdrugs.dxy.cn
+
 Surge:
 
 [Script]
-http-response ^https?:\/\/(i|newdrugs)\.dxy\.cn\/(snsapi\/username\/|app\/user\/(pro\/stat\?|init\?timestamp=)) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/yyzs.js
-
+http-response requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Delecomp/Selfiles/Profiles/Script/MedicalAssist.js
 [MITM]
 hostname = newdrugs.dxy.cn
 */
