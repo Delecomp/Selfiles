@@ -1,5 +1,9 @@
 /*
-^https:\/\/app\.bilibili\.com\/(search\/resource|x\/(resource\/show\/tab|v2\/(view|rank|feed|reply\/main|account\/mine))) url response-body BilibiliAdBlock.js
+QuantumultX: ^https:\/\/app\.bilibili\.com\/(search\/resource|x\/(resource\/show\/tab|v2\/(view|rank|feed|reply\/main|account\/mine))) url response-body BilibiliAdBlock.js
+
+Surge: http-response ^https:\/\/app\.bilibili\.com\/(search\/resource|x\/(resource\/show\/tab|v2\/(view|rank|feed|reply\/main|account\/mine))) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Delecomp/Selfiles/Profiles/Script/BilibiliAdBlock.js
+
+hostname = app.bilibili.com
 */
 const up_blacklist = ['NathanRich火锅大王','大祥哥来了'];
 const title_blackwords = ['乔碧萝','鸡你太美'];
