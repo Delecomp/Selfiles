@@ -1,8 +1,10 @@
 /* Fantastical unlock pro
 QuantumultX:
-[rewrite_local]
 ^https:\/\/api\.flexibits\.com\/v1\/(auth|account)\/(device|details|appstore-receipt)\/$ url script-response-body Fantastical.js
-[mitm]
+
+Surge:
+http-response ^https:\/\/api\.flexibits\.com\/v1\/(auth|account)\/(device|details|appstore-receipt)\/$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Delecomp/Selfiles/Profiles/Script/Fantastical.js
+
 hostname=api.flexibits.com
 */
 
