@@ -1,1 +1,2 @@
-Collected from **DivineEngine**
+Collected from **DivineEngine**  
+Thanks To [@ConnersHua](https://github.com/ConnersHua)
