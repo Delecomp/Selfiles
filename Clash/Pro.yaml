@@ -56,6 +56,18 @@ experimental:
 #    - 119.29.29.29
 #    - 223.5.5.5
 
+# Provider
+proxy-provider:
+  V2:
+    type: http
+    path: ./v2.yaml
+    url: 
+    interval: 3600
+    health-check:
+        enable: false
+        url: http://www.gstatic.com/generate_204
+        interval: 300
+        
 # Clash for Windows
 cfw-bypass:
   - qq.com
@@ -232,12 +244,14 @@ Proxy Group:
   proxies:
     - "PROXY"
     - "DIRECT"
+    
 # Apple 服务代理
 - name: "Apple"
   type: select
   proxies:
     - "DIRECT"
     - "PROXY"
+    
 # 国际流媒体服务
 - name: "GlobalMedia"
   type: select
