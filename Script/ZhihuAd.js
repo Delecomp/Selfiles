@@ -3,7 +3,8 @@ QuantumultX:
 ^https:\/\/api\.zhihu\.com\/appview\/api\/v4\/answers\/.*\/recommendations url reject-img
 ^https?:\/\/(api|www)\.zhihu\.com\/(moments(\/recommend)?\?(action|feed_type)|topstory\/recommend|.*\/questions|market\/header|people|appview\/(v2|p)\/(answer\/)?\d{1,10}\?no\_image\=false(\&article\_fixed\_bottom\=1)?\&X\-SUGER\=) url script-response-body ZhiHuAdBlock.js
 [MITM]
-hostname = api.zhihu.com
+hostname = api.zhihu.com, www.zhihu.com
+
 Surge:
 URL-REGEX,^https:\/\/pic\d\.zhimg\.com\/70\/
 URL-REGEX,https://(api|www).zhihu.com/(ab|adx|fringe|commercial|ad-style-service|.*(recommendations|extended|featured-comment-ad)|api/v4/mcn/)
