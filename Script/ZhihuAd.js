@@ -3,7 +3,9 @@ QuantumultX:
 ^https:\/\/api\.zhihu\.com\/appview\/api\/v4\/answers\/.*\/recommendations url reject-img
 ^https?:\/\/(api|www)\.zhihu\.com\/(moments(\/recommend)?\?(action|feed_type)|topstory\/recommend|.*\/questions|market\/header|people|appview\/(v2|p)\/(answer\/)?\d{1,10}\?no\_image\=false(\&article\_fixed\_bottom\=1)?\&X\-SUGER\=) url script-response-body ZhihuAd.js
 [MITM]
-hostname = api.zhihu.com, www.zhihu.com
+hostname = api.zhihu.com, www.zhihu.com （加上自己屏蔽的ip后，用正则表达式屏蔽)
+
+(因QuantumultX最新版移除empty_sni_enabled参数，改为在mitm中直接匹配相关ip，所以请自行使用抓包工具屏蔽广告ip！)
 
 Surge:
 URL-REGEX,^https:\/\/pic\d\.zhimg\.com\/70\/
