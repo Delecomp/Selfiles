@@ -1,3 +1,16 @@
+/*
+Xmind Unlocks Pro
+QuantumultX:
+[rewrite_local]
+https:\/\/www\.xmind\.cn\/\_res\/devices url script-response-body https://raw.githubusercontent.com/Delecomp/Selfiles/Profiles/Script/XMind.js
+[mitm]
+hostname = www.xmind.cn
+Surge:
+[MITM]
+hostname = www.xmind.cn
+[Script]
+http-response https:\/\/www\.xmind\.cn\/\_res\/devices requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Delecomp/Selfiles/Profiles/Script/XMind.js
+*/
 var obj = JSON.parse($response.body);
 
 obj = {
