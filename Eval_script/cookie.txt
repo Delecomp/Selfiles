@@ -1,6 +1,6 @@
 hostname=music.163.com,www.flyertea.com,*.smzdm.com,c.tieba.baidu.com,*.iqiyi.com,api.m.jd.com,credits.bz.mgtv.com,i.meituan.com,node.kg.qq.com,sf-integral-sign-in.weixinjia.net,passport.suning.com,luckman.suning.com,sign.suning.com,gameapi.suning.com
 
-^https:\/\/music\.163\.com\/m\/?.? url script-request-header eval_script.js
+^https?:\/\/music\.163\.com url script-request-header eval_script.js
 
 ^https:\/\/www\.flyertea\.com\/source\/plugin\/mobile\/mobile\.php\?module=getdata&.* url script-request-header eval_script.js
 
