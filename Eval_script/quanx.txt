@@ -1,6 +1,6 @@
 hostname=ios.prod.ftl.netflix.com,api.m.jd.com,trade-acs.m.taobao.com,www.zhihu.com,api.zhihu.com,app.bilibili.com,p.du.163.com,api.picsart.c*,api.meiease.c*,newdrugs.dxy.cn,api.weibo.cn,mapi.weibo.com,*.uve.weibo.com,www.xmind.cn
 
-^https?:\/\/(api|www)\.zhihu\.com\/(moments(\/recommend)?\?(action|feed_type)|topstory\/recommend|.*\/questions|market\/header|people|appview\/(v2|p)\/(answer\/)?\d{1,10}\?no\_image\=false(\&article\_fixed\_bottom\=1)?\&X\-SUGER\=) url script-response-body eval_script.js
+^https?:\/\/api\.zhihu\.com\/(moments\?(action|feed_type)|topstory\/recommend|.*\/questions|market\/header|people) url script-response-body eval_script.js
 
 ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig) url script-response-body eval_script.js
 
