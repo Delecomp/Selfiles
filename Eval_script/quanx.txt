@@ -1,6 +1,4 @@
-hostname=api.m.jd.com,trade-acs.m.taobao.com,www.zhihu.com,api.zhihu.com,app.bilibili.com,p.du.163.com,api.picsart.c*,api.meiease.c*,newdrugs.dxy.cn,api.weibo.cn,mapi.weibo.com,*.uve.weibo.com,www.xmind.cn
-
-^https?:\/\/api\.zhihu\.com\/(moments\?(action|feed_type)|topstory\/recommend|.*\/questions|market\/header|people) url script-response-body eval_script.js
+hostname=api.m.jd.com,trade-acs.m.taobao.com,www.zhihu.com,api.zhihu.com,app.bilibili.com,p.du.163.com,api.picsart.c*,api.meiease.c*,newdrugs.dxy.cn,api.weibo.cn,mapi.weibo.com,*.uve.weibo.com,www.xmind.cn,api.flexibits.com
 
 ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig) url script-response-body eval_script.js
 
@@ -14,6 +12,8 @@ hostname=api.m.jd.com,trade-acs.m.taobao.com,www.zhihu.com,api.zhihu.com,app.bil
 
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url script-response-body eval_script.js
 
+^https?:\/\/api\.zhihu\.com\/(moments\?(action|feed_type)|topstory\/recommend|.*\/questions|market\/header|people) url script-response-body eval_script.js
+
 ^https:\/\/app\.bilibili\.com\/(search\/resource|x\/(resource\/show\/tab|v2\/(view|rank|feed|reply\/main|account\/mine))) url script-response-body eval_script.js
 
 ^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info\.json url script-response-body eval_script.js
@@ -23,3 +23,5 @@ hostname=api.m.jd.com,trade-acs.m.taobao.com,www.zhihu.com,api.zhihu.com,app.bil
 ^https?:\/\/(i|newdrugs)\.dxy\.cn\/(snsapi\/username\/|app\/user\/(pro\/stat\?|init\?timestamp=)) url script-response-body eval_script.js
 
 https:\/\/www\.xmind\.cn\/\_res\/devices url script-response-body eval_script.js
+
+^https:\/\/api\.flexibits\.com\/v1\/(auth|account)\/(device|details|appstore-receipt)\/$ url script-response-body eval_script.js
