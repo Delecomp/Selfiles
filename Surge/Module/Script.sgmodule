@@ -1,0 +1,40 @@
+#!name=Script Module
+#!desc=Script Pack
+#!system=ios
+
+[URL Rewrite]
+
+[MITM]
+hostname = %INSERT% api.m.jd.com,trade-acs.m.taobao.com, api.picsart.c*, api.meiease.c*, newdrugs.dxy.cn, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, www.xmind.cn, api.flexibits.com,mp.weixin.qq.com
+
+[Script]
+# > JD Pricing
+jd_price.js = type=http-response,requires-body=1,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
+
+# > Taobao Pricing
+tb_price.js = type=http-request,requires-body=1,pattern=^http://.+/amdc/mobileDispatch,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
+tb_price.js = type=http-response,requires-body=1,pattern=^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
+
+# > 微博应用内去广告 by yichahucha
+wb_ad.js = type=http-response,requires-body=1,pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/2\/(statuses\/(unread|extend|positives\/get|(friends|video)(\/|_)(mix)?timeline)|stories\/(video_stream|home_list)|(groups|fangle)\/timeline|profile\/statuses|comments\/build_comments|photo\/recommend_list|service\/picfeed|searchall|cardlist|page|\!/photos\/pic_recommend_status),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_ad.js
+
+# > 微博启动页去广告 by yichahucha
+wb_launch.js = type=http-response,requires-body=1,pattern=^https?:\/\/(sdk|wb)app\.uve\.weibo\.com(\/interface\/sdk\/sdkad.php|\/wbapplua\/wbpullad.lua),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_launch.js
+
+# > 微信公众号去广告 by Choler&NoByDa
+WeChat.js = type=http-response,requires-body=1,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/WeChat.js
+
+# > 毒 App 去启动页广告 by ConnersHua
+com.poizon.js = type=http-response,requires-body=1,pattern=^https?:\/\/m\.poizon\.com\/client\/init,script-path=https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Script/com.poizon.js
+
+# > 用药助手
+MedicalAssist.js =type=http-response,requires-body=1,pattern=^https?:\/\/(i|newdrugs)\.dxy\.cn\/(snsapi\/username\/|app\/user\/(pro\/stat\?|init\?timestamp=)),script-path=https://raw.githubusercontent.com/Delecomp/Selfiles/Profiles/Script/MedicalAssist.js
+
+# > Xmind Pro
+XMind.js =type=http-response,requires-body=1,pattern=https:\/\/www\.xmind\.cn\/\_res\/devices,script-path=https://raw.githubusercontent.com/Delecomp/Selfiles/Profiles/Script/XMind.js
+
+# > Fantastical Pro
+Fantastical.js =type=http-response,requires-body=1,pattern=^https:\/\/api\.flexibits\.com\/v1\/(auth|account)\/(device|details|appstore-receipt)\/$,script-path=https://raw.githubusercontent.com/Delecomp/Selfiles/Profiles/Script/Fantastical.js
+
+# > Picsart Pro
+PicsArt.js =type=http-response,requires-body=1,pattern=^https:\/\/api\.(picsart|meiease)\.c(n|om)\/users\/show\/me\.json,script-path=https://raw.githubusercontent.com/Delecomp/Selfiles/Profiles/Script/PicsArt.js

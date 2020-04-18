@@ -1,0 +1,49 @@
+#!name=Get Cookies
+#!desc=Can be disabled when done
+#!system=ios
+
+[MITM]
+hostname = %APPEND% music.163.com, www.flyertea.com, *.smzdm.com, c.tieba.baidu.com, *.iqiyi.com, api.m.jd.com, credits.bz.mgtv.com, i.meituan.com, node.kg.qq.com, sf-integral-sign-in.weixinjia.net, passport.suning.com, luckman.suning.com, sign.suning.com, gameapi.suning.com
+
+[Script]
+# > 网易云音乐签到 
+neteasemusic.cookie.js = type=http-request,pattern=^https?:\/\/music\.163\.com\/?.?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.cookie.js
+
+#> 飞客茶馆签到
+flyertea.cookie.js = type=http-request,pattern=^https:\/\/www\.flyertea\.com\/source\/plugin\/mobile\/mobile\.php\?module=getdata&.*,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/flyertea/flyertea.cookie.js
+
+# > 什么值得买签到 
+smzdm.cookie.js = type=http-request,pattern=^https?:\/\/www\.smzdm\.com\/?.?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.cookie.js
+
+# > 百度贴吧签到 
+tieba.cookie.js = type=http-request,pattern=^https?:\/\/tieba\.baidu\.com\/?.?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.cookie.js
+
+# > 爱奇艺 App 签到 
+iQIYI_GetCookie.js = type=http-request,pattern=^https?:\/\/.*\.iqiyi\.com\/.*authcookie=,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/iQIYI-DailyBonus/iQIYI_GetCookie.js
+
+# > JD 签到 
+JD_DailyBonus.js = type=http-request,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+
+# > 芒果tv
+mgtv.cookie.js = type=http-request,pattern=^https:\/\/credits.bz.mgtv.com\/user\/creditsTake,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/mgtv/mgtv.cookie.js
+
+# > 美团 App 签到 
+meituan.cookie.js = type=http-request,requires-body=1,pattern=^https?:\/\/i\.meituan\.com\/evolve\/signin\/signpost\/,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js
+
+# > 全民K歌签到
+qmkg.cookie.js = type=http-request,requires-body=1,pattern=^https://node\.kg\.qq\.com/webapp/proxy?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qmkg/qmkg.cookie.js
+
+# > 顺丰（小程序+App）签到 
+sfexpress.cookie.js = type=http-request,pattern=^https?:\/\/mcs-mimp-web.sf-express.com\/mcs-mimp\/share\/(.*?)Redirect,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
+sfexpress.cookie.js = type=http-request,pattern=^https?:\/\/sf-integral-sign-in.weixinjia.net\/app\/index,script-pat
+h=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
+
+# > 苏宁易购 App 签到 
+suning.cookie.js = type=http-request,requires-body=1,pattern=^https?:\/\/passport\.suning\.com\/ids\/login$,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.cookie.js
+suning.cookie.js = type=http-request,pattern=^https?:\/\/luckman\.suning\.com\/luck-web\/sign\/api\/clock_sign.do,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.cookie.js
+suning.cookie.js = type=http-request,pattern=^https?:\/\/sign\.suning\.com\/sign-web\/m\/promotion\/sign\/doSign.do,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.cookie.js
+suning.cookie.js = type=http-request,pattern=^https?:\/\/gameapi\.suning\.com\/sngame-web\/(api\/signin\/private\/customerSignOperation.do|gateway\/api\/queryPrize.do),script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.cookie.js
+
+
+
+
