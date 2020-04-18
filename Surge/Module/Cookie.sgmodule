@@ -35,8 +35,7 @@ qmkg.cookie.js = type=http-request,requires-body=1,pattern=^https://node\.kg\.qq
 
 # > 顺丰（小程序+App）签到 
 sfexpress.cookie.js = type=http-request,pattern=^https?:\/\/mcs-mimp-web.sf-express.com\/mcs-mimp\/share\/(.*?)Redirect,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
-sfexpress.cookie.js = type=http-request,pattern=^https?:\/\/sf-integral-sign-in.weixinjia.net\/app\/index,script-pat
-h=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
+sfexpress.cookie.js = type=http-request,pattern=^https?:\/\/sf-integral-sign-in.weixinjia.net\/app\/index,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
 
 # > 苏宁易购 App 签到 
 suning.cookie.js = type=http-request,requires-body=1,pattern=^https?:\/\/passport\.suning\.com\/ids\/login$,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.cookie.js
