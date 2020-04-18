@@ -3,7 +3,7 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND% music.163.com, www.flyertea.com, *.smzdm.com, c.tieba.baidu.com, *.iqiyi.com, api.m.jd.com, credits.bz.mgtv.com, i.meituan.com, node.kg.qq.com, sf-integral-sign-in.weixinjia.net, passport.suning.com, luckman.suning.com, sign.suning.com, gameapi.suning.com
+hostname = %APPEND% music.163.com, www.flyertea.com, *.smzdm.com, tieba.baidu.com, *.iqiyi.com, api.m.jd.com, credits.bz.mgtv.com, i.meituan.com, node.kg.qq.com, sf-integral-sign-in.weixinjia.net, passport.suning.com, luckman.suning.com, sign.suning.com, gameapi.suning.com
 
 [Script]
 # > 网易云音乐签到 
