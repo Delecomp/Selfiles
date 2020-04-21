@@ -1,0 +1,25 @@
+#!name=eval_script.js module
+
+[MITM]
+hostname = %INSERT% music.163.com,www.flyertea.com,*.smzdm.com,c.tieba.baidu.com,*.iqiyi.com,api.m.jd.com,credits.bz.mgtv.com,i.meituan.com,node.kg.qq.com,sf-integral-sign-in.weixinjia.net
+
+[Script]
+eval_script.js = type=http-request,pattern=^https:\/\/music\.163\.com\/m\/?.?,script-path=eval_script.js
+
+eval_script.js = type=http-request,pattern=^https:\/\/www\.flyertea\.com\/source\/plugin\/mobile\/mobile\.php\?module=getdata&.*,script-path=eval_script.js
+
+eval_script.js = type=http-request,pattern=^https:\/\/www\.smzdm\.com\/?.?,script-path=eval_script.js
+
+eval_script.js = type=http-request,pattern=https?:\/\/c\.tieba\.baidu\.com\/c\/s\/login,script-path=eval_script.js
+
+eval_script.js = type=http-request,pattern=https?:\/\/.*\.iqiyi\.com\/.*authcookie=,script-path=eval_script.js
+
+eval_script.js = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean,script-path=eval_script.js
+
+eval_script.js = type=http-request,pattern=^https:\/\/credits.bz.mgtv.com\/user\/creditsTake,script-path=eval_script.js
+
+eval_script.js = type=http-request,requires-body=1,pattern=^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/,script-path=eval_script.js
+
+eval_script.js = type=http-request,requires-body=1,pattern=^https://node\.kg\.qq\.com/webapp/proxy?,script-path=eval_script.js
+
+eval_script.js = type=http-request,pattern=^https:\/\/sf-integral-sign-in.weixinjia.net\/app\/index,script-path=eval_script.js
