@@ -1,0 +1,21 @@
+hostname = music.163.com,www.flyertea.com,*.smzdm.com,c.tieba.baidu.com,*.iqiyi.com,api.m.jd.com,credits.bz.mgtv.com,i.meituan.com,node.kg.qq.com,sf-integral-sign-in.weixinjia.net
+
+^https:\/\/music\.163\.com\/m\/?.? url script-request-header eval_script.js
+
+^https:\/\/www\.flyertea\.com\/source\/plugin\/mobile\/mobile\.php\?module=getdata&.* url script-request-header eval_script.js
+
+^https:\/\/www\.smzdm\.com\/?.? url script-request-header eval_script.js
+
+https?:\/\/c\.tieba\.baidu\.com\/c\/s\/login url script-request-header eval_script.js
+
+https?:\/\/.*\.iqiyi\.com\/.*authcookie= url script-request-header eval_script.js
+
+https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean url script-request-header eval_script.js
+
+^https:\/\/credits.bz.mgtv.com\/user\/creditsTake url script-request-header eval_script.js
+
+^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/ url script-request-body eval_script.js
+
+^https://node\.kg\.qq\.com/webapp/proxy? url script-request-body eval_script.js
+
+^https:\/\/sf-integral-sign-in.weixinjia.net\/app\/index url script-request-header eval_script.js
