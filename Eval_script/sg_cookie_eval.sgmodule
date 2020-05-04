@@ -1,7 +1,7 @@
 #!name=eval_script.js module
 
 [MITM]
-hostname = %INSERT% music.163.com,www.flyertea.com,*.smzdm.com,c.tieba.baidu.com,*.iqiyi.com,api.m.jd.com,credits.bz.mgtv.com,i.meituan.com,node.kg.qq.com,sf-integral-sign-in.weixinjia.net
+hostname = %INSERT% music.163.com,www.flyertea.com,*.smzdm.com,c.tieba.baidu.com,*.iqiyi.com,api.m.jd.com,credits.bz.mgtv.com,i.meituan.com,node.kg.qq.com,passport.suning.com,luckman.suning.com,sign.suning.com,gameapi.suning.com
 
 [Script]
 eval_script.js = type=http-request,pattern=^https:\/\/music\.163\.com\/m\/?.?,script-path=eval_script.js
@@ -22,4 +22,10 @@ eval_script.js = type=http-request,requires-body=1,pattern=^https:\/\/i.meituan.
 
 eval_script.js = type=http-request,requires-body=1,pattern=^https://node\.kg\.qq\.com/webapp/proxy?,script-path=eval_script.js
 
-eval_script.js = type=http-request,pattern=^https:\/\/sf-integral-sign-in.weixinjia.net\/app\/index,script-path=eval_script.js
+eval_script.js = type=http-request,requires-body=1,pattern=^https:\/\/passport.suning.com\/ids\/login$,script-path=eval_script.js
+
+eval_script.js = type=http-request,pattern=^https:\/\/luckman.suning.com\/luck-web\/sign\/api\/clock_sign.do,script-path=eval_script.js
+
+eval_script.js = type=http-request,pattern=^https:\/\/sign.suning.com\/sign-web\/m\/promotion\/sign\/doSign.do,script-path=eval_script.js
+
+eval_script.js = type=http-request,pattern=^https:\/\/gameapi.suning.com\/sngame-web\/(api\/signin\/private\/customerSignOperation.do|gateway\/api\/queryPrize.do),script-path=eval_script.js
