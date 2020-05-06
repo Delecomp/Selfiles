@@ -1,4 +1,4 @@
-hostname = api.m.jd.com,trade-acs.m.taobao.com,www.zhihu.com,api.zhihu.com,app.bilibili.com,newdrugs.dxy.cn,api.weibo.cn,mapi.weibo.com,*.uve.weibo.com,www.xmind.cn,api.flexibits.com
+hostname = api.m.jd.com,trade-acs.m.taobao.com,www.zhihu.com,api.zhihu.com,app.bilibili.com,newdrugs.dxy.cn,api.weibo.cn,mapi.weibo.com,*.uve.weibo.com,www.xmind.cn
 
 ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig) url script-response-body eval_script.js
 
@@ -19,5 +19,3 @@ hostname = api.m.jd.com,trade-acs.m.taobao.com,www.zhihu.com,api.zhihu.com,app.b
 ^https?:\/\/(i|newdrugs)\.dxy\.cn\/(snsapi\/username\/|app\/user\/(pro\/stat\?|init\?timestamp=)) url script-response-body eval_script.js
 
 https:\/\/www\.xmind\.cn\/\_res\/devices url script-response-body eval_script.js
-
-^https:\/\/api\.flexibits\.com\/v1\/(auth|account)\/(device|details|appstore-receipt)\/$ url script-response-body eval_script.js
