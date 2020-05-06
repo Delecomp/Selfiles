@@ -1,7 +1,7 @@
 #!name=eval_script.js module
 
 [MITM]
-hostname = %INSERT% api.m.jd.com,trade-acs.m.taobao.com,www.zhihu.com,api.zhihu.com,app.bilibili.com,newdrugs.dxy.cn,api.weibo.cn,mapi.weibo.com,*.uve.weibo.com,www.xmind.cn,api.flexibits.com
+hostname = %INSERT% api.m.jd.com,trade-acs.m.taobao.com,www.zhihu.com,api.zhihu.com,app.bilibili.com,newdrugs.dxy.cn,api.weibo.cn,mapi.weibo.com,*.uve.weibo.com,www.xmind.cn
 
 [Script]
 eval_script.js = type=http-response,requires-body=1,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig),script-path=eval_script.js
@@ -23,5 +23,3 @@ eval_script.js = type=http-response,requires-body=1,pattern=^https:\/\/app\.bili
 eval_script.js = type=http-response,requires-body=1,pattern=^https?:\/\/(i|newdrugs)\.dxy\.cn\/(snsapi\/username\/|app\/user\/(pro\/stat\?|init\?timestamp=)),script-path=eval_script.js
 
 eval_script.js = type=http-response,requires-body=1,pattern=https:\/\/www\.xmind\.cn\/\_res\/devices,script-path=eval_script.js
-
-eval_script.js = type=http-response,requires-body=1,pattern=^https:\/\/api\.flexibits\.com\/v1\/(auth|account)\/(device|details|appstore-receipt)\/$,script-path=eval_script.js
