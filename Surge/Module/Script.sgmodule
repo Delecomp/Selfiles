@@ -11,10 +11,12 @@ IP-CIDR,47.102.83.0/24,REJECT,no-resolve
 
 [URL Rewrite]
 
+
 [MITM]
 hostname = %INSERT% api.m.jd.com,trade-acs.m.taobao.com, api.picsart.c*, api.meiease.c*, newdrugs.dxy.cn, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, www.xmind.cn, mp.weixin.qq.com
 
 [Script]
+
 # > JD Pricing
 jd_price.js = type=http-response,requires-body=1,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
 
@@ -28,9 +30,6 @@ WeChat.js = type=http-response,requires-body=1,pattern=^https?:\/\/mp\.weixin\.q
 
 # > 毒 App 去启动页广告 by ConnersHua
 com.poizon.js = type=http-response,requires-body=1,pattern=^https?:\/\/m\.poizon\.com\/client\/init,script-path=https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Script/com.poizon.js
-
-# > 用药助手
-MedicalAssist.js =type=http-response,requires-body=1,pattern=^https?:\/\/(i|newdrugs)\.dxy\.cn\/(snsapi\/username\/|app\/user\/(pro\/stat\?|init\?timestamp=)),script-path=https://raw.githubusercontent.com/Delecomp/Selfiles/Profiles/Script/MedicalAssist.js
 
 # > Xmind Pro
 XMind.js =type=http-response,requires-body=1,pattern=https:\/\/www\.xmind\.cn\/\_res\/devices,script-path=https://raw.githubusercontent.com/Delecomp/Selfiles/Profiles/Script/XMind.js
