@@ -20,6 +20,4 @@ eval_script.js = type=http-response,requires-body=1,pattern=^https?:\/\/api\.zhi
 
 eval_script.js = type=http-response,requires-body=1,pattern=^https:\/\/app\.bilibili\.com\/(search\/resource|x\/(resource\/show\/tab|v2\/(view|rank|feed|reply\/main|account\/mine))),script-path=eval_script.js
 
-eval_script.js = type=http-response,requires-body=1,pattern=^https?:\/\/(i|newdrugs)\.dxy\.cn\/(snsapi\/username\/|app\/user\/(pro\/stat\?|init\?timestamp=)),script-path=eval_script.js
-
 eval_script.js = type=http-response,requires-body=1,pattern=https:\/\/www\.xmind\.cn\/\_res\/devices,script-path=eval_script.js
