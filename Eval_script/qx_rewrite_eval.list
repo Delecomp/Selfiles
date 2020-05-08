@@ -16,6 +16,4 @@ hostname = api.m.jd.com,trade-acs.m.taobao.com,www.zhihu.com,api.zhihu.com,app.b
 
 ^https:\/\/app\.bilibili\.com\/(search\/resource|x\/(resource\/show\/tab|v2\/(view|rank|feed|reply\/main|account\/mine))) url script-response-body eval_script.js
 
-^https?:\/\/(i|newdrugs)\.dxy\.cn\/(snsapi\/username\/|app\/user\/(pro\/stat\?|init\?timestamp=)) url script-response-body eval_script.js
-
 https:\/\/www\.xmind\.cn\/\_res\/devices url script-response-body eval_script.js
