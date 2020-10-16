@@ -1,21 +1,16 @@
 /**
- * 名称：Endless_Google.user.js
- * 地址：https://openuserjs.org/install/tumpio/Endless_Google.user.js
- *
+
  ******** 以下为 tamperJS 自动生成的 rewrite 相关信息，可能需要根据情况适当调整 ********
 
 [rewrite]
-http:\/\/www\.google\..* url script-response-body Endless_Google.user.js
-https:\/\/www\.google\..* url script-response-body Endless_Google.user.js
-https:\/\/encrypted\.google\..* url script-response-body Endless_Google.user.js
+
+http:\/\/www\.google\..* url script-response-body https://raw.githubusercontent.com/Delecomp/Selfiles/Profiles/Script/Better_google_search.js
+https:\/\/www\.google\..* url script-response-body https://raw.githubusercontent.com/Delecomp/Selfiles/Profiles/Script/Better_google_search.js
+https:\/\/encrypted\.google\..* url script-response-body https://raw.githubusercontent.com/Delecomp/Selfiles/Profiles/Script/Better_google_search.js
 
 [mitm]
 , www.google.*, encrypted.google.*
 
- ********
- * 工具: tamperJS BY @elecV2
- * 频道: https://t.me/elecV2
- *
 **/
 
 let body = $response.body
